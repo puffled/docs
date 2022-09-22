@@ -1,6 +1,6 @@
 ### i have so many `/dev/ttyN`!!! isnt this bloat
 
-they're literally virtual files (dev is either `devtmpfs`, or `tmpfs`). if you ***REALLY*** want to remove them, modify `MAX_NR_CONSOLES`. i have no idea what setting it to less than `2` or higher than `63` will do, i cannot be bothered to try, you shouldn't try either.
+they're literally virtual files (`/dev` is either `devtmpfs`, or `tmpfs`). if you ***REALLY*** want to remove them, modify `MAX_NR_CONSOLES`. i have no idea what setting it to less than `2` or higher than `63` will do, i cannot be bothered to try, you shouldn't try either.
 
 `include/uapi/linux/vt.h`
 
