@@ -19,7 +19,7 @@ choose your variant of git sync [verified](#verified-sync), or [unverified](#unv
 
 create the text file `/etc/portage/repos.conf/gentoo.conf`
 
-```
+```ini
 [gentoo]
 auto-sync = yes
 location = /var/db/repos/gentoo
@@ -38,7 +38,7 @@ now [complete the setup](#complete-the-setup), or continue reading the other opt
 
 create the text file `/etc/portage/repos.conf/gentoo.conf`
 
-```
+```ini
 [gentoo]
 auto-sync = yes
 location = /var/db/repos/gentoo
@@ -53,13 +53,13 @@ which will not verify any commit signatures!
 
 remove the current gentoo repository as portage cannot clone the git repository into the non-empty directory
 
-```bash
+```shell
 # rm -rf /var/db/repos/gentoo
 ```
 
 and sync the gentoo repository
 
-```bash
+```shell
 # emerge --sync gentoo
 ```
 
