@@ -6,7 +6,7 @@ first of all, install `dev-vcs/git`, if you haven't already. ***it is required**
 
 create the text file `/etc/portage/repos.conf/default.conf`
 
-```
+```ini
 [DEFAULT]
 main-repo = gentoo
 ```
