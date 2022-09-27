@@ -18,3 +18,6 @@ for those who wish to go down the `/dev` manager-less route
 - `/dev/fb*` (`video` group, may or may not be used by xorg, graphics driver dependant)
 - `/dev/input` (`input` group, used by xorg again, specifically, libinput, etc))
 - `/dev/tty*` (`tty` group, used by xorg)
+
+
+todo: efistub
