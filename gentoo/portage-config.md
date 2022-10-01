@@ -7,9 +7,9 @@ equivalent to `*/* make.conf` in `package.env`, each `key="value(s)"` expands to
 
 ### `package.env`
 
-regular categories
+regular categories (no `package.*` equivalents)
 
- - `CFLAGS`, `CXXFLAGS`, so on, is equivalent to `*/* env.conf` in `package.env`
+ - `CFLAGS`, `CXXFLAGS`, so on, is as is
 
 special categories
 
