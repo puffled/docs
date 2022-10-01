@@ -1,19 +1,18 @@
 ### `make.conf`
 
-contains `KEY="value"` entries which ***globally*** apply
+equivalent to `*/* make.conf` in `package.env`, each `key="value(s)"` expands to `key: value(s)`
 
- - `ACCEPT_KEYWORDS=<keywords...>` is equivalent to `*/* <keywords...> `in `package.accept_keywords`
- - `CFLAGS`, `CXXFLAGS`, etc is equivalent to `*/* make.conf` in `package.env`
- - `INPUT_DEVICES="<flags...>"` is equivalent to `*/* input_devices: <flags...>` in `package.use`
- - `USE="<flags...>"` is equivalent to `*/* <flags...>` in `package.use`
- - `VIDEO_CARDS="<flags...>"` is equivalent to `*/* video_cards: <flags...>` in `package.use` 
+contains `KEY="value"` entries which ***globally*** (`*/*`) apply
 
-### todo...
+### `package.env`
 
-`bashrc`
-`env`
-`package.env`
-`package.accept_keywords`
-`package.unmask`
-`package.mask`
-`package.provided`
+regular categories
+
+ - `CFLAGS`, `CXXFLAGS`, so on, is equivalent to `*/* env.conf` in `package.env`
+
+special categories
+
+ - `ACCEPT_KEYWORDS=<keywords...>` is equivalent to `<keywords...> `in `package.accept_keywords`
+ - `INPUT_DEVICES="<flags...>"` is equivalent to `input_devices: <flags...>` in `package.use`
+ - `USE="<flags...>"` is equivalent to `<flags...>` in `package.use`
+ - `VIDEO_CARDS="<flags...>"` is equivalent to `video_cards: <flags...>` in `package.use` 
