@@ -1,8 +1,9 @@
 ### `make.conf`
 
-equivalent to `*/* make.conf` in `package.env`, each `key="value(s)"` expands to `key: value(s)`
 
 contains `KEY="value"` entries which ***globally*** (`*/*`) apply
+
+equivalent to `*/* make.conf` in `package.env`, each `key="value(s)"` expands to `key: value(s)`
 
 ### `package.env`
 
