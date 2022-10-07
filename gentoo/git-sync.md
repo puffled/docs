@@ -65,4 +65,4 @@ and sync the gentoo repository
 
 ### extra info
 
-the `sync-depth` option translates to git's `--depth=` option, which performs [shallow clones and fetches](https://www.git-scm.com/docs/shallow). a value of `0` is equivalent to omitting this option, aka fetch the **full** history
+the `sync-depth` option translates to git's `--depth=` option, which performs [shallow clones and fetches](https://www.git-scm.com/docs/shallow). a value of `0` is equivalent to omitting this option, aka fetch the *full history*
