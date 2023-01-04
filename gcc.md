@@ -2,6 +2,8 @@
 
 this exists because [optimize options](https://gcc.gnu.org/onlinedocs/gcc/Optimize-Options.html) is outdated
 
+the following is from [gcc/opts.cc](https://github.com/gcc-mirror/gcc/blob/master/gcc/opts.cc#L562-L698)
+
 ### `-O1`, `-Og`, and above
 
 ```
