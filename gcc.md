@@ -157,6 +157,11 @@ iterations of loops at the expanse of repeating loop bodies
 
 ### `-Ofast`
 
+disregards current C standards compliance, mostly affects fp (floating point) math
+
+allow data races, assume finite fp values, assume no exceptions occur from fp arithmetic, may cause loss of precision
+with questionable code (`x * x * x * x * x * x` vs `powf(6, x)`)
+
 ```
 -ffast-math
 -fallow-store-data-races
