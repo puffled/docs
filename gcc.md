@@ -172,6 +172,8 @@ with questionable code (`x * x * x * x * x * x` vs `powf(6, x)`)
 
 valid options to pass to `-march=`, this is from [gcc/common/config/i386/i386-common.cc](https://github.com/gcc-mirror/gcc/blob/master/gcc/common/config/i386/i386-common.cc#L1917-L1969)
 
+`-march=native` is resolved via probing cpuinfo, see [gcc/commmon/config/i386/cpuinfo.h](https://github.com/gcc-mirror/gcc/blob/master/gcc/common/config/i386/cpuinfo.h)
+
 ```
 generic
 i386
