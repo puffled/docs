@@ -4,6 +4,22 @@ this exists because [optimize options](https://gcc.gnu.org/onlinedocs/gcc/Optimi
 
 the following is from [gcc/opts.cc](https://github.com/gcc-mirror/gcc/blob/master/gcc/opts.cc#L562-L698)
 
+GCC uses four variables internally to decide what to do with the provided `-O` option, `opts->x_optimize`,
+`opts->x_optimize_size`, `opts->x_optimize_fast`, and `opts->x_optimize_debug`. unless specified, the
+variables are set to zero
+
+ - `-O0`, `-O1`, `-O2`, `-O3`, sets `opts->x_optimize` to the value provided, respectively
+ - `-Os` sets `opts->x_optimize` to `2`, and `opts->x_optimize_size` to `1`
+ - `-Oz` sets `opts->x_optimize` to `2`, and `opts->x_optimize_size` to `2`
+ - `-Ofast` sets `opts->x_optimize` to `3`, and `opts->x_optimize_fast` to `1`
+ - `-Og` sets `opts->x_optimize` to `1`, and `opts->x_optimize_debug` to `1`
+
+in other words...
+
+ - `-Os` and `-Oz` imply `-O2`
+ - `-Ofast` implies `-O3`
+ - `-Og` implies `-O1`
+
 ### `-O1`, `-Og`, and above
 
 ```
