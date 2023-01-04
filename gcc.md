@@ -113,6 +113,9 @@ in other words...
 
 ### `-O2` and above (not `-Os`, and `-Og`).
 
+mostly enables alignment of items, which will improve CPU read times, and possibly increase binary size slightly,
+as it has to emit padding data to align them
+
 ```
 -falign-functions
 -falign-jumps
@@ -127,6 +130,9 @@ in other words...
 ```
 
 ### `-O3` and above
+
+mostly enables agressive inlining and loop unrolling, which will fold multiple functions into larger ones, and reduce
+iterations of loops at the expanse of repeating loop bodies
 
 ```
 -fgcse-after-reload
