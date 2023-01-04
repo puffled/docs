@@ -113,7 +113,7 @@ in other words...
 
 ### `-O2` and above (not `-Os`, and `-Og`).
 
-mostly enables alignment of items, which will improve CPU read times, and possibly increase binary size slightly,
+mostly enables alignment of items, which will improve CPU read/write times (to memory), and possibly increase binary size slightly,
 as it has to emit padding data to align them
 
 ```
