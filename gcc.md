@@ -226,3 +226,5 @@ znver2
 znver3
 znver4
 ```
+
+last updated `4th jan 2023`, GCC version `13.0.0`
