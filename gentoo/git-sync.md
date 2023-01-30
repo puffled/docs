@@ -27,7 +27,7 @@ sync-git-verify-commit-signature = yes
 sync-depth = 1
 sync-openpgp-key-path = /usr/share/openpgp-keys/gentoo-release.asc
 sync-type = git
-sync-uri = https://github.com/gentoo-mirror/gentoo.git
+sync-uri = https://github.com/gentoo/gentoo
 ```
 
 which will verify the commit signature of the *lastest* commit aginst gentoo's pgp keys each time the repository is updated
@@ -44,7 +44,7 @@ auto-sync = yes
 location = /var/db/repos/gentoo
 sync-depth = 1
 sync-type = git
-sync-uri = https://github.com/gentoo-mirror/gentoo.git
+sync-uri = https://github.com/gentoo/gentoo
 ```
 
 which will not verify any commit signatures!
