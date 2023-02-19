@@ -71,4 +71,4 @@ for my beyondx (S10 5G), wpa_supplicant does work to bring up it's broadcom wifi
 
 getting sound working is also somewhat interesting, first, you'll want to be running android.
 
-and use these two commands `alsactl`, `amixer` from `media-sound/alsa-utils`. the first to monitor what controls change when playing/pausing audio, the second to obtain the values they were changed to.
+and use these two commands `alsactl`, `amixer` from `media-sound/alsa-utils`. the first to monitor what controls change when playing/pausing audio, the second to obtain the values they were changed to. i have yet to investigate whether you can replicate the control behaviour using alsa hooks as documented under [Plugin: hooks](https://www.alsa-project.org/alsa-doc/alsa-lib/pcm_plugins.html).
