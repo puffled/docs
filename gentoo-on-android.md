@@ -65,6 +65,6 @@ cp -v /usr/src/linux/arch/arm64/boot/Image boot/boot.img-kernel
 
 most things on android devices require firmware, copy everything in `/vendor/firmware` to `/lib/firmware`.
 
-sound, networking, bluetooth, anything really, functioning is extremely hit-or-miss.
+sound, networking, bluetooth, display, anything really, functioning is extremely hit-or-miss.
 
-for my beyondx (S10 5G), wpa_supplicant does work to bring up it's broadcom wifi modem (required vendor firmware)
+for my beyondx (S10 5G), wpa_supplicant does work to bring up it's broadcom wifi modem (required vendor firmware). i have not been able to get display working, even using advice from [postmarketos](https://wiki.postmarketos.org/wiki/Troubleshooting:display).
