@@ -68,3 +68,7 @@ most things on android devices require firmware, copy everything in `/vendor/fir
 sound, networking, bluetooth, display, anything really, functioning is extremely hit-or-miss.
 
 for my beyondx (S10 5G), wpa_supplicant does work to bring up it's broadcom wifi modem (required vendor firmware). i have not been able to get display working, even using advice from [postmarketos](https://wiki.postmarketos.org/wiki/Troubleshooting:display).
+
+getting sound working is also somewhat interesting, first, you'll want to be running android.
+
+and use these two commands `alsactl`, `amixer` from `media-sound/alsa-utils`. the first to monitor what controls change when playing/pausing audio, the second to obtain the values they were changed to.
