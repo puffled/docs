@@ -1,6 +1,12 @@
-the process is pretty much the same as any other gentoo installation (see [handbook](https://wiki.gentoo.org/wiki/Handbook:AMD64)), however you skip ***everything*** to do with preparing some live environment (this is android/android recover), and you skip everything to do with partitioning.
+the process is pretty much the same as any other gentoo installation (see [handbook](https://wiki.gentoo.org/wiki/Handbook:AMD64)), however you skip ***everything*** to do with preparing some live environment (this is android/android recovery), and you skip everything to do with partitioning.
 
 because android, the root directory `/` is either an initramfs, or the system partition, so you will treat `/data` as your working directory (like `/mnt/gentoo` referenced in the handbook).
+
+`/data` will likely be mounted with `nosuid`, so remount it, `mount -o suid,remount /data`.
+
+selinux will likely be enabled, so disable it, `setenforce 0` (some devices have selinux force enabled, and this will not work, please use a better rom, or figure out how to get a kernel with runtime configurable/permanently disabled selinux).
+
+there is also CONFIG_ANDROID_PARANOID_NETWORKING to screw with you, it is an in-kernel feature to restrict system call access to certain group ids. for internet usage, you will want to add `inet:x:3003:portage,<your username>` to `/etc/groups`.
 
 ### android boot image
 
