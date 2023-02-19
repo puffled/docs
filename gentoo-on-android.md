@@ -60,3 +60,11 @@ cp -v /usr/src/linux/arch/arm64/boot/Image boot/boot.img-kernel
         --tags_offset "$(cat boot/boot.img-tags_offset)" \
         --output 'new-boot.img'
 ```
+
+### normalicy
+
+most things on android devices require firmware, copy everything in `/vendor/firmware` to `/lib/firmware`.
+
+sound, networking, bluetooth, anything really, functioning is extremely hit-or-miss.
+
+for my beyondx (S10 5G), wpa_supplicant does work to bring up it's broadcom wifi modem (required vendor firmware)
