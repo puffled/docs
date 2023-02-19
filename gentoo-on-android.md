@@ -1,11 +1,20 @@
 the process is pretty much the same as any other gentoo installation (see [handbook](https://wiki.gentoo.org/wiki/Handbook:AMD64)), however you skip ***everything*** to do with preparing some live environment (this is android/android recovery), and you skip everything to do with partitioning.
 
+### access
+
+you'll want some kind of terminal, so you can either
+
+ - use [termux](https://github.com/termux/termux-app), you **will** need [root](https://github.com/topjohnwu/Magisk). the command `su` should gain root. if you use `tsu`, the `LD_PRELOAD`'d library, `libtermux-exec.so`, **will** break chroot, unset it like `LD_PRELOAD= chroot ...`.
+ - use adb, you **will** also need [root](https://github.com/topjohnwu/Magisk), mostly sane here.
+ - use `adb root`, **most** non-debug roms disable this.
+
 ### annoyances
 
  -  the root directory `/` is either an initramfs, or the system partition, so you will treat `/data` as your working directory (like `/mnt/gentoo` referenced in the handbook).
  - `/data` will likely be mounted with `nosuid`, so remount it, `mount -o suid,remount /data`.
  - selinux will likely be enabled, so disable it, `setenforce 0` (some devices have selinux force enabled, and this will not work, please use a better rom, or figure out how to get a kernel with runtime configurable/permanently disabled selinux).
  - there is also `CONFIG_ANDROID_PARANOID_NETWORKING` to screw with you, it is an in-kernel feature to restrict system call access to certain group ids. for internet usage, you will want to add `inet:x:3003:portage,<your username>` to `/etc/groups`.
+ - toybox's `mount` implementation is garbage, `mount --rbind`, **does not recursively bind**.
 
 ### android boot image
 
