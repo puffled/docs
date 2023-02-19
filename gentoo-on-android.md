@@ -1,3 +1,7 @@
+the process is pretty much the same as any other gentoo installation (see [handbook](https://wiki.gentoo.org/wiki/Handbook:AMD64)), however you skip ***everything*** to do with preparing some live environment (this is android/android recover), and you skip everything to do with partitioning.
+
+because android, the root directory `/` is either an initramfs, or the system partition, so you will treat `/data` as your working directory (like `/mnt/gentoo` referenced in the handbook).
+
 ### android boot image
 
 obtain your device's boot image, from a partition (generally `/dev/block/by-name/boot`), or from an ota update package.
